@@ -21,4 +21,14 @@ Route::get('/', function () {
         'copyright' => 'Powered by @Manuelfotodi'
     ];
     return view('homepage', $welcomePage);
-});
+})->name('home');
+
+Route::get('/about', function () {
+    $aboutPage = [
+        'page_title' => 'Su di noi',
+        'main_title' => 'Ciao, questo parla di noi!',
+        'subtitle' => 'Su di me.',
+        'copyright' => 'Powered by @Manuelfotodi'
+    ];
+    return view('about', $aboutPage);
+})->name('about');
