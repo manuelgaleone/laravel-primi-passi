@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $welcomePage = [
+        'page_title' => 'Welcome to my Web Site!',
+        'main_title' => 'Ciao, questa è una prova!',
+        'subtitle' => 'La mia prima prova in Laravel.',
+        'copyright' => 'Powered by @Manuelfotodi'
+    ];
+    return view('homepage', $welcomePage);
 });
